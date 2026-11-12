@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kennedy Nguyen | Portfolio</title>
+<meta name="description" content="Portfolio of Kennedy Nguyen, designer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sage:#6f998d; --teal:#327d70; --teal-dark:#245d53; --paper:#fafafa;
+  --ink:#27312e; --line:#e3e8e6; --side:250px;
+  --font:"Roboto",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#1c2321; --ink:#e8efec; --line:#2f3a37;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--sage);line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+.side{position:fixed;inset:0 auto 0 0;width:var(--side);background:var(--paper);border-right:1px solid var(--line);overflow-y:auto;z-index:5}
+.avatar{display:grid;place-items:center;width:150px;height:150px;margin:20px auto 16px;border-radius:50%;border:6px solid #a3b8b2;background:var(--teal);color:#fff;font-size:44px;font-weight:300;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.side nav{border-top:1px solid var(--line);padding:10px 0}
+.side nav a{display:flex;align-items:center;gap:22px;padding:12px 22px;text-decoration:none;font-size:17px;letter-spacing:.03em}
+.side nav a svg{width:26px;height:26px;fill:var(--teal);flex:none}
+.side nav a:hover,.side nav a.on{background:rgba(50,125,112,.12)}
+.side nav a.on{font-weight:500}
+
+main{margin-left:var(--side)}
+section{min-height:100vh;padding:90px clamp(24px,6vw,110px);display:flex;flex-direction:column;justify-content:center}
+section:nth-of-type(even){background:var(--paper);color:var(--ink)}
+section:nth-of-type(odd){color:#fff}
+h1{font-weight:300;font-size:clamp(38px,6vw,78px);line-height:1.1;margin:0 0 22px;text-shadow:0 2px 6px rgba(0,0,0,.18)}
+h1 mark{background:var(--teal);color:#fff;padding:0 .2em;display:inline-block}
+h2{font-weight:300;font-size:clamp(30px,4vw,46px);margin:0 0 28px}
+.role{font-size:clamp(20px,2.4vw,30px);font-weight:300;margin:0 0 20px}
+.role span{color:var(--teal-dark)}
+.caret{display:inline-block;width:2px;height:1em;background:currentColor;vertical-align:-.12em;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{font-size:clamp(18px,2vw,26px);font-weight:300;max-width:46ch;margin:0 0 28px}
+.social{display:flex;gap:14px;margin-bottom:28px}
+.social a{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#eee;color:#222}
+.social svg{width:24px;height:24px;fill:currentColor}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:16px 34px;font-size:17px;letter-spacing:.08em;text-decoration:none;border:2px solid #fff;border-radius:4px}
+.btn.solid{background:#fff;color:var(--teal)}
+.btn.ghost{color:#fff}
+.btn:hover{transform:translateY(-2px);transition:transform .15s}
+.measure{max-width:62ch;font-size:18px;font-weight:300}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--paper)}
+.card .shot{aspect-ratio:16/10;background:linear-gradient(135deg,var(--sage),var(--teal));display:grid;place-items:center;color:#fff;font-weight:300}
+.card .shot img{width:100%;height:100%;object-fit:cover}
+.card div.body{padding:18px 20px}
+.card h3{margin:0 0 6px;font-weight:500;font-size:20px}
+.card p{margin:0 0 10px;font-weight:300}
+.card a.link{color:var(--teal);font-weight:500}
+.job{border-left:3px solid var(--teal);padding:2px 0 2px 20px;margin-bottom:26px;max-width:62ch}
+.job h3{margin:0;font-weight:500;font-size:20px}
+.job small{display:block;color:var(--teal);margin-bottom:6px}
+.job p{margin:0;font-weight:300}
+.chips{display:flex;flex-wrap:wrap;gap:10px;max-width:62ch}
+.chips li{list-style:none;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.5)}
+.chips{padding:0;margin:0}
+section:nth-of-type(even) .chips li{background:rgba(50,125,112,.1);border-color:var(--teal)}
+.contact a.mail{font-size:clamp(22px,3vw,36px);font-weight:300}
+
+@media (max-width:820px){
+  .side{inset:0 0 auto 0;width:auto;height:auto;border-right:0;border-bottom:1px solid var(--line);display:flex;align-items:center;overflow-x:auto;overflow-y:hidden}
+  .avatar{width:44px;height:44px;margin:8px 8px 8px 14px;border-width:3px;font-size:15px;flex:none}
+  .side nav{display:flex;border:0;padding:0}
+  .side nav a{padding:14px 14px;gap:8px;font-size:15px;white-space:nowrap}
+  .side nav a svg{width:20px;height:20px}
+  main{margin-left:0}
+  section{padding-top:110px;min-height:auto;padding-bottom:70px}
+}
+</style>
+</head>
+<body>
+
+<aside class="side">
+  <div class="avatar" aria-hidden="true"><img src="/files/images/kennedy.webp" alt="Kennedy Nguyen"></div>
+  <nav aria-label="Sections">
+    <a href="#about" class="on"><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg>About</a>
+    <a href="#experience"><svg viewBox="0 0 24 24"><path d="M3.5 18.5l6-6 4 4L22 7.9 20.6 6.5l-7.1 7.1-4-4L2 17z"/></svg>Experience</a>
+    <a href="#projects"><svg viewBox="0 0 24 24"><path d="M4 6H2v14a2 2 0 0 0 2 2h14v-2H4V6zm16-4H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-2 12H10v-2h8v2zm0-3H10V9h8v2zm0-3H10V6h8v2z"/></svg>Projects</a>
+    <a href="#skills"><svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>Skills</a>
+    <a href="#education"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2v4L12 21l7-3.8v-4L12 17l-7-3.8z"/></svg>Education</a>
+    <a href="#contact"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>Contact</a>
+    <a href="resume.pdf"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg>Resume</a>
+  </nav>
+</aside>
+
+<main>
+  <section id="about">
+    <h1>Hi, I'm <mark>Kennedy Nguyen.</mark></h1>
+    <p class="role">A <span id="typed"></span><i class="caret" aria-hidden="true"></i></p>
+    <p class="lead">Biomedical and Health Informatics student @ The Univeristy of Washington. Aspiring UI designer. I want to empower people with better interfaces and more information.</p>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/kcvn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3V9.5zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.600 4.800 6V21h-4v-5.200c0-1.300 0-2.900-1.800-2.900s-2.100 1.400-2.100 2.800V21h-4V9.500z"/></svg></a>
+      <a href="https://github.com/kcvn05" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a11.500 11.500 0 0 0-3.600 22.400c.6.100.8-.3.8-.6v-2c-3.200.7-3.900-1.400-3.900-1.400-.5-1.300-1.300-1.700-1.300-1.700-1-.7.100-.7.100-.7 1.200.1 1.800 1.200 1.800 1.200 1 1.800 2.700 1.300 3.300 1 .1-.7.400-1.300.7-1.600-2.600-.3-5.300-1.300-5.300-5.700 0-1.300.5-2.300 1.200-3.100-.1-.3-.5-1.500.1-3.100 0 0 1-.3 3.200 1.200a11 11 0 0 1 5.800 0c2.200-1.500 3.200-1.200 3.200-1.200.6 1.600.2 2.800.1 3.100.8.800 1.200 1.800 1.200 3.100 0 4.400-2.700 5.400-5.300 5.700.4.400.8 1.100.8 2.200v3.200c0 .3.200.7.800.6A11.500 11.500 0 0 0 12 .5z"/></svg></a>
+    </div>
+    <div class="btns">
+      <a class="btn solid" href="#projects">View Work</a>
+      <a class="btn ghost" href="#contact">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="job"><h3>Seasonal Sales Associate, H&M</h3><small>November 2025 to January 2026</small><p>Problem 
+      solved under pressure: operated POS, handled purchases and returns during peak season heavy-traffic hours.</p></div>
+    <div class="job"><h3>Team Member, Cultivate South Park</h3><small>May 2024 to August 2025</small><p>Helped set up heavy event 
+      equipment safely and on schedule as part of a 10-person crew, running roughly two events a month.</p></div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects (Still updating)</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="shot"><img src="/files/images/rootrise/favicon.svg" alt="Root Rise"></div>
+        <div class="body"><h3>RootRise - Front-end Developer / UXUI</h3><p>Problem: Addressing the declining thinking skills of middle-school students, 
+          separate student and teacher dashboards resulting in a gamified teacher-controlled learning platform where instead of rushing to the end, 
+          the thinking part feels like defeating a boss.</p>
+          <a class="link" href="/proj_sites/rootrise.html">Learn more</a></div>
+      </article>
+      <article class="card">
+        <div class="shot"><img src="/files/images/kitchentalk/kitchentalk_logo.webp" alt="Kitchen Talk"></div>
+        <div class="body"><h3>KitchenTalk - Research / UXUI</h3><p>Problem: Elderly adults in the US face the highest rates
+          of loneliness, video-call based platform that allows families to bond over cooking recipes at the same time.</p>
+          <a class="link" href="proj_sites/kitchentalk.html">Learn more</a></div>
+      </article>
+      <article class="card">
+        <div class="shot"><img src="/files/images/foodsmart/foodsmart_logo.webp" alt="Food Smart"></div>
+        <div class="body"><h3>FoodSmart - Research / UXUI</h3><p>Problem, your role, and the outcome in one or two lines.</p>
+          <a class="link" href="/proj_sites/foodsmart.html">Learn more</a></div>
+      </article> <!--
+      <article class="card">
+        <div class="shot">Project 3 image</div>
+        <div class="body"><h3>Project three</h3><p>Problem, your role, and the outcome in one or two lines.</p>
+          <a class="link" href="#">View case study</a></div>
+      </article> -->
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="chips"><li>SQL</li><li>Figma</li><li>Prototyping</li><li>User research</li><li>Design systems</li><li>HTML and CSS</li><li>JavaScript</li><li>Python</li></ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="job"><h3>BS Biomedical and Health Informatics, University of Washington</h3><small>June 2027</small><p>3.4 GPA | Dean's List (2025-2026)</p></div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p class="measure">Open to new roles and work opportunities. The fastest way to reach me is email.</p>
+    <p><a class="mail" href="mailto:kcnguyen206@gmail.com">kcnguyen206@gmail.com</a></p>
+    <div class="btns"><a class="btn solid" href="/files/Kennedy_Nguyen_Resume.pdf">Download resume</a></div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var phrases=["Information Lover","UI Designer","Fast Learner"];
+  var el=document.getElementById("typed"),p=0,c=0,del=false;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=phrases[0];return;}
+  function tick(){
+    var w=phrases[p];
+    el.textContent=w.slice(0,c);
+    if(!del&&c===w.length){del=true;return setTimeout(tick,1400);}
+    if(del&&c===0){del=false;p=(p+1)%phrases.length;}
+    c+=del?-1:1;
+    setTimeout(tick,del?45:90);
+  }
+  tick();
+})();
+
+(function(){
+  var links=[].slice.call(document.querySelectorAll(".side nav a[href^='#']"));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute("href"));});
+  if(!("IntersectionObserver" in window))return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id);});
+      }
+    });
+  },{rootMargin:"-45% 0px -50% 0px"});
+  secs.forEach(function(s){if(s)io.observe(s);});
+})();
+</script>
+</body>
+</html>
