@@ -9,8 +9,8 @@
   a.back{color:#327d70}
   h1{font-weight:300;font-size:clamp(32px,5vw,52px);margin:24px 0 8px}
   .meta{color:#327d70;margin:0 0 28px}
-  figure{margin:36px 0; max-width: 600px;}
-  figure img{width:100%;height:auto;border-radius:8px;border:1px solid #e3e8e6}
+  figure{margin:36px 0; max-width: 800px;}
+  figure img{width:100%;height:fit-content;border-radius:8px;border:1px solid #e3e8e6}
   figcaption{margin-top:10px;font-size:16px;color:#555}
   p{max-width:62ch}
 </style>
@@ -19,9 +19,12 @@
   <a class="back" href="../index.html#projects">Back to projects</a>
   <h1>RootRise</h1>
   <p class="meta">UXUI & Front-End (JavaScript, React, HTML, CSS) · Figma · 2026</p>
-  <p>Two or three sentences: the problem, who it was for, and what you did.</p>
   <p>Middle schoolers are using AI at alarming rates and aren't using their own critical thinking skills to approach problems, especially homework.</p>
-  <p>RootRise is an education platform aimed at making learning fun and competitive.</p>
+  <p>RootRise is an education platform aimed at making learning fun and competitive through
+    gaining XP from completing problems and teacher assigned challenges, all to meet the goal of
+    growing the student's invidivual seedling into a fully fledged tree, as well as their team shared tree to foster
+    friendly classroom competition.
+  </p>
 
   <figure>
     <img src="/files/images/rootrise/student/stu_acc_creat.webp" alt="First screen of the app">
@@ -34,11 +37,43 @@
   </figure>
 
   <figure>
-    <img src="../img/project-1-process.webp" alt="Early wireframes">
-    <figcaption>Early wireframes. I tested two layouts before picking this one.</figcaption>
+    <img src="/files/images/rootrise/student/rootrise_student_main.webp" alt="Main Student Dashboard">
+    <figcaption>From the main dashboard, students have access to different challenges assigned
+      by their teacher, are able to view their personal tree's growth, their assigned team and xp, and 
+      classroom leaderboards.
+    </figcaption>
   </figure>
 
-  <p><strong>Outcome:</strong> What changed, or what you learned.</p>
-  <p><a href="https://your-figma-prototype-link">Try out the student-side prototype</a></p>
+  <figure>
+    <figcaption>Students are able to complete lessons and challenges assigned to them by their teacher.</figcaption>
+    <figcaption>The idea is that if students are struggling on questions, teachers can set up the first two
+      hints to get their students to take a second and think about the question. If the students still need help
+      by the third hint, RootRise is connected to Claude's API with a specific prompt to never tell the student the
+      answer and only give them guidance on how to get on the right track. 
+    </figcaption>
+    <img src="/files/images/rootrise/student/stu prob1.webp" alt="Student Challenge Prompt">
+    <img src="/files/images/rootrise/student/stu_hint1.webp" alt="Student Challenge Hint 1">
+    <img src="/files/images/rootrise/student/stu_hint2.webp" alt="Student Challenge Hint 2">
+    <img src="/files/images/rootrise/student/stu_hint3.png" alt="Student Challenge Hint 3">
+    <img src="/files/images/rootrise/student/stu_chall_comp.png" alt="Student Challenge Completed">
+    <figcaption>Our team's Claude key is expired but there is a prompt in place that prevents it from doing the work
+      for the student instead of working with the student. AI has been used as a shortcut instead of a tool recently and
+      we're trying to influence the next generation to build better AI habits if they choose to use any AI.
+    </figcaption>
+    <figcaption>Upon challenge complete, students receive XP that goes towards their personal XP milestone and their team's milestone.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/files/images/rootrise/student/stu_growth.png" alt="Student growth screen">
+    <figcaption>
+      After completing challenges, students earn XP towards their plant's growth with different growth stages
+      to reach. 
+    </figcaption>
+    <img src="/files/images/rootrise/student/stu_leaderboard.png" alt="Student growth screen">
+    <figcaption>
+      Students and their assigned teams can compete with other teams in their class to complete the most challenges
+      and grow their team trees the most.
+    </figcaption>
+  </figure>
 </body>
 </html>
